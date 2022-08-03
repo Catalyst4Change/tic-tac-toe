@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.P1 {
+  background-color: slategray;
+}
+
+.P2 {
+  background-color: beige;
+}
+
+.player-area {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+
+}
+
+.game-board {
+  display: flex;
+  width: 350px;
+  flex-wrap: wrap;
+}
+
+.token-space {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+}
