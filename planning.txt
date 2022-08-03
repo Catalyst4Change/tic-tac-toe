@@ -1,0 +1,8 @@
+Hi! I hope this isn't late. I had a friend have a mental health crisis after school on Tuesday. She came over and we talked and did some therapy. She's better now. 
+Anyway! I tried to put my iPad notes in the gist, but they're probably illegible. 
+My plan is to start on the basic HTML because I think that'll be the easiest.
+Then I'm going to work on the JS until I have at least close-to-working model.
+Then I will work on stylizing last.
+
+I'm playing with a few ideas of where to store the info of what token is in what square.
+My CYOA is going to be having each player select their own token!
