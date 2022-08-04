@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="styles.css">
-  <script src="main.js"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
@@ -10,29 +9,41 @@
 </head>
 <body>
   <main class="container">
-    <section class="P1 player-area">
+    <section class="P1 side-bar section">
       <p>
-        "Player 1 Wins:"
+        Itchy Wins: 
+      <p id="P1-wins">
+        0
+      </p>  
       </p>
     </section>
-    <section class="center">  
-      <section class="game-board">
-        <div class="1 token-space">1</div>
-        <div class="2 token-space">2</div>
-        <div class="3 token-space">3</div>
-        <div class="4 token-space">4</div>
-        <div class="5 token-space">5</div>
-        <div class="6 token-space">6</div>
-        <div class="7 token-space">7</div>
-        <div class="8 token-space">8</div>
-        <div class="9 token-space">9</div>
+    <section class="center section"> 
+      <section class="banner section">
+        Player X turn
+      </section> 
+      <section class="game-board section" section>
+        <div id="1" class="one token-space section">❌</div>
+        <div id="2" class="two token-space section">⭕️</div>
+        <div id="3" class="three token-space section">❌</div>
+        <div id="4" class="four token-space section">⭕️</div>
+        <div id="5" class="five token-space section">❌</div>
+        <div id="6" class="six token-space section">⭕️</div>
+        <div id="7" class="seven token-space section">❌</div>
+        <div id="8" class="eight token-space section">⭕️</div>
+        <div id="9" class="nine token-space section">❌</div>
       </section>
     </section>
-    <section class="P2 player-area">
+    <section class="P2 side-bar section">
       <p>
-        "Player 2 Wins:"
+        Scratchy Wins: 
+      </p>
+      <p id="P2-wins">
+        0
       </p>
     </section>
   </main>
+  <script src="player.js"></script>
+  <script src="game.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
