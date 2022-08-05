@@ -1,5 +1,6 @@
 class ticTacToe {
   constructor(playerOne, playerTwo) {
+    playerBanner.innerText = "Itchy's turn..."
     this.playerOneTurn = true;
     this.turnsTaken = 0; //when gets to 9 game over
     this.tokenPositions = {
@@ -13,6 +14,8 @@ class ticTacToe {
       8: "",
       9: ""
     }
+    this.clearGameBoard();
+    this.gameOver = false;
   }
 
   checkGridSpace(gridPosition) {
@@ -28,10 +31,12 @@ class ticTacToe {
     if (this.playerOneTurn) {
       this.tokenPositions[gridPosition] = playerOne.token;
       tokenSpacesVis[gridPosition - 1].innerText = this.tokenPositions[gridPosition]
+      playerBanner.innerText = "Scratchy's turn..."
       this.playerOneTurn = false;
     } else {
       this.tokenPositions[gridPosition] = playerTwo.token;
       tokenSpacesVis[gridPosition - 1].innerText = this.tokenPositions[gridPosition]
+      playerBanner.innerText = "Itchy's turn..."
       this.playerOneTurn = true;
     }
     console.log(this.tokenPositions);
@@ -64,51 +69,34 @@ class ticTacToe {
   this.startClearTimer()
   if (this.playerOneTurn) {
       playerOne.increaseWins();
+      playerBanner.innerText = "Itchy Wins!"
     } else if (!this.playerOneTurn) {
-      playerTwo.increaseWins()
+      playerTwo.increaseWins();
+      playerBanner.innerText = "Scratchy Wins!"
     }
   }
 
   checkForDraw(){
-    if (!someoneWon && this.turnsTaken === 9) {
+    if (!this.someoneWon && this.turnsTaken === 9) {
       console.log("DRAW!");
       this.startClearTimer();
     }
   }
 
+  clearGameBoard() {
+    console.log("ding!");
+      var keys = Object.keys(this.tokenPositions)
+      for (let i = 0; i < keys.length; i++) {
+      this.tokenPositions[keys[i]] = "";
+      tokenSpacesVis[i].innerText = "";
+      this.turnsTaken = 0;
+    }
+  }
+
   startClearTimer() {
-    var timeoutID = setTimeout(this.clearGameBoard, 5000);
+    var timeoutID = setTimeout(() => {this.clearGameBoard()}, 5000);    
     console.log(`timer ${timeoutID} started...`);
   }
   
-  clearGameBoard() {
-    console.log("ding!");
-    for (let i = 1; i < 9; i++) {
-      this.tokenPositions[i] = "";
-      tokenSpacesVis[i].innerText = ";"
-      this.turnsTaken = 0;
-    }
-    console.log(this.tokenPositions);
-  }
 }
 
-
-
-/*
-
-
-know who's turn it is.
-display relevant data.
-
-player places toekn on board
-listen to each button 
-place icon in space via html
-change tokenPosition to 1/2
-
-if player1
-
-A way to keep track of which player’s turn it currently is
-A way to check the Game’s board data for win conditions
-A way to detect when a game is a draw (no one has won)
-A way to reset the Game’s board to begin a new game
-*/
