@@ -1,5 +1,5 @@
 class ticTacToe {
-  constructor(tokenOne, tokenTwo) {
+  constructor(playerOne, playerTwo) {
     this.playerOneTurn = true;
     this.turnsTaken = 0; //when gets to 9 game over
     this.tokenPositions = {
@@ -16,7 +16,6 @@ class ticTacToe {
   }
 
   checkGridSpace(gridPosition) {
-    console.log("checkGridSpace rcvd:", gridPosition);
     if (this.tokenPositions[gridPosition] === "") {
       this.claimGridSpace(gridPosition);
       console.log(gridPosition);
@@ -39,20 +38,33 @@ class ticTacToe {
   }
 
   checkForWin() {
-    if (this.tokenPositions[1] === this.tokenPositions[2] === this.tokenPositions[3]) {
+    if (this.tokenPositions[1] === this.tokenPositions[2] && this.tokenPositions[2] === this.tokenPositions[3] && this.tokenPositions[3] != "") {
       this.someoneWon();
-    } else if (this.tokenPositions[4] === this.tokenPositions[5] === this.tokenPositions[6]) {
+    } else if (this.tokenPositions[4] === this.tokenPositions[5] && this.tokenPositions[5] === this.tokenPositions[6] && this.tokenPositions[6] != "") {
       this.someoneWon();
-    } else if (this.tokenPositions[7] === this.tokenPositions[8] === this.tokenPositions[9]) {
+    } else if (this.tokenPositions[7] === this.tokenPositions[8] && this.tokenPositions[8] === this.tokenPositions[9] && this.tokenPositions[9] != "") {
+      this.someoneWon();
+    } else if (this.tokenPositions[1] === this.tokenPositions[4] && this.tokenPositions[4] === this.tokenPositions[7] && this.tokenPositions[7] != "") {
+      this.someoneWon();
+    } else if (this.tokenPositions[2] === this.tokenPositions[5] && this.tokenPositions[5] === this.tokenPositions[6] && this.tokenPositions[6] != "") {
+      this.someoneWon();
+    } else if (this.tokenPositions[3] === this.tokenPositions[6] && this.tokenPositions[6] === this.tokenPositions[9] && this.tokenPositions[9] != "") {
+      this.someoneWon();
+    } else if (this.tokenPositions[1] === this.tokenPositions[5] && this.tokenPositions[5] === this.tokenPositions[9] && this.tokenPositions[9] != "") {
+      this.someoneWon();
+    } else if (this.tokenPositions[3] === this.tokenPositions[5] && this.tokenPositions[5] === this.tokenPositions[7] && this.tokenPositions[7] != "") {
       this.someoneWon();
     }
   }
-
   someoneWon() {
-    console.log('WIN!');
-    someoneWon = true;
-    this.startClearTimer()
-
+  console.log('WIN!');
+  someoneWon = true;
+  this.startClearTimer()
+  if (this.playerOneTurn) {
+    playerOne.increaseWins();
+  } else if (!this.playerOneTurn) {
+    playerTwo.increaseWins()
+  }
   }
 
   checkForDraw(){
