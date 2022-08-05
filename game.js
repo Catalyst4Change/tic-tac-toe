@@ -27,9 +27,11 @@ class ticTacToe {
     console.log('turns', this.turnsTaken);
     if (this.playerOneTurn) {
       this.tokenPositions[gridPosition] = playerOne.token;
+      tokenSpacesVis[gridPosition - 1].innerText = this.tokenPositions[gridPosition]
       this.playerOneTurn = false;
     } else {
       this.tokenPositions[gridPosition] = playerTwo.token;
+      tokenSpacesVis[gridPosition - 1].innerText = this.tokenPositions[gridPosition]
       this.playerOneTurn = true;
     }
     console.log(this.tokenPositions);
@@ -61,10 +63,10 @@ class ticTacToe {
   someoneWon = true;
   this.startClearTimer()
   if (this.playerOneTurn) {
-    playerOne.increaseWins();
-  } else if (!this.playerOneTurn) {
-    playerTwo.increaseWins()
-  }
+      playerOne.increaseWins();
+    } else if (!this.playerOneTurn) {
+      playerTwo.increaseWins()
+    }
   }
 
   checkForDraw(){
@@ -75,14 +77,15 @@ class ticTacToe {
   }
 
   startClearTimer() {
-    var timeoutID = setTimeout(this.clearGameBoard(), [5000]);
-    console.log("timer started...");
+    var timeoutID = setTimeout(this.clearGameBoard, 5000);
+    console.log(`timer ${timeoutID} started...`);
   }
   
   clearGameBoard() {
     console.log("ding!");
-    for (let i = 0; i < this.tokenPositions.length; i++) {
+    for (let i = 1; i < 9; i++) {
       this.tokenPositions[i] = "";
+      tokenSpacesVis[i].innerText = ";"
       this.turnsTaken = 0;
     }
     console.log(this.tokenPositions);
@@ -93,15 +96,6 @@ class ticTacToe {
 
 /*
 
-win conditions
-123
-456
-789
-147
-258
-369
-159
-357
 
 know who's turn it is.
 display relevant data.

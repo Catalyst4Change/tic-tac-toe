@@ -8,14 +8,16 @@
 // var spaceEight = document.getElementById('8');
 // var spaceNine = document.getElementById('9');
 
+
+
+var tokenSpacesVis = document.querySelectorAll('.token-space')
 var gameBoard = document.querySelector('.game-board');
 var gridPosition = 0;
-var playerOne = new Player('🪚')
-var playerTwo = new Player('🪓')
+var playerOne = new Player('🐭')
+var playerTwo = new Player('😺')
 var someoneWon = false;
 var newGame = new ticTacToe(playerOne.token, playerTwo.token)
 console.log(newGame);
-
 
 gameBoard.addEventListener('click', intParser);
 
@@ -24,6 +26,7 @@ function intParser(eventData) {
   console.log(gridPosition);
   newGame.checkGridSpace(gridPosition);
 }
+
 
 // newGame.checkGridSpace)
 
