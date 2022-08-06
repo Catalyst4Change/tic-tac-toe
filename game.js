@@ -30,12 +30,13 @@ class ticTacToe {
       this.tokenPositions[gridPosition] = this.playerOne.token;
       this.playerOneTurn = false;
       updateBannerTurn('Scratchy')
+      
     } else {
       this.tokenPositions[gridPosition] = this.playerTwo.token;
       this.playerOneTurn = true;
       updateBannerTurn('Itchy')
     }
-    console.log(this.tokenPositions);
+
     this.checkForWin();
     this.checkForDraw();
   }
@@ -43,18 +44,25 @@ class ticTacToe {
   checkForWin() {
     if (this.tokenPositions[1] === this.tokenPositions[2] && this.tokenPositions[2] === this.tokenPositions[3] && this.tokenPositions[3] != "") {
       this.someoneWon();
+
     } else if (this.tokenPositions[4] === this.tokenPositions[5] && this.tokenPositions[5] === this.tokenPositions[6] && this.tokenPositions[6] != "") {
       this.someoneWon();
+
     } else if (this.tokenPositions[7] === this.tokenPositions[8] && this.tokenPositions[8] === this.tokenPositions[9] && this.tokenPositions[9] != "") {
       this.someoneWon();
+
     } else if (this.tokenPositions[1] === this.tokenPositions[4] && this.tokenPositions[4] === this.tokenPositions[7] && this.tokenPositions[7] != "") {
       this.someoneWon();
+
     } else if (this.tokenPositions[2] === this.tokenPositions[5] && this.tokenPositions[5] === this.tokenPositions[8] && this.tokenPositions[8] != "") {
       this.someoneWon();
+
     } else if (this.tokenPositions[3] === this.tokenPositions[6] && this.tokenPositions[6] === this.tokenPositions[9] && this.tokenPositions[9] != "") {
       this.someoneWon();
+
     } else if (this.tokenPositions[1] === this.tokenPositions[5] && this.tokenPositions[5] === this.tokenPositions[9] && this.tokenPositions[9] != "") {
       this.someoneWon();
+
     } else if (this.tokenPositions[3] === this.tokenPositions[5] && this.tokenPositions[5] === this.tokenPositions[7] && this.tokenPositions[7] != "") {
       this.someoneWon();
     }
@@ -63,10 +71,12 @@ class ticTacToe {
   someoneWon() {
   this.gameOver = true;
   this.startClearTimer()
+  
   if (!this.playerOneTurn) {
       this.playerOne.increaseWins();
       updateBannerWin('ITCHY')
       updateScores()
+
     } else if (this.playerOneTurn) {
       this.playerTwo.increaseWins();
       updateBannerWin('SCRATCHY')
@@ -90,9 +100,11 @@ class ticTacToe {
     for (let i = 1; i < 10; i++) {
       this.tokenPositions[i] = "";
     }
+
     this.turnsTaken = 0;
     this.gameOver = false;
     renderBoard();
+
     if (this.playerOneTurn) {
       updateBannerTurn('Itchy')
     } else {
