@@ -13,19 +13,21 @@
 .side-bar {
   background-repeat: no-repeat;
   background-position: center;
+  background-position: bottom;
   background-color: aqua;
-  font-size: 20px;
-  flex:auto
+  font-size: 30px;
+  min-width: 50px;
+  flex: auto;
 }
 
 .P1 {
   background-image: url('assets/Itchy.png');
-  background-size: 70%;
+  background-size: 175px;
 }
 
 .P2 {
   background-image: url('assets/Scratchy.png');
-  background-size: 90%;
+  background-size: 250px;
 }
 
 .center{
@@ -35,7 +37,7 @@
 .banner {
   align-items: center;
   height:50px;
-  font-size: 45px;
+  font-size: 40px;
 }
 
 .game-board {
