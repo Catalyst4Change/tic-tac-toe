@@ -3,7 +3,9 @@
 </p>
 
 ## What’s going on here?:
-This project was designed and built for my Turing School of Software & Design Module 1 final solo project. The goal was to create a working Tic-Tac-Toe game that keeps track of and displays players' turns and scores. Project expectations can be found here: https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo-v2.html
+This project was designed and built by Catalyst for my Turing School of Software & Design Module 1 final solo project. The goal was to create a working Tic-Tac-Toe game that keeps track of and displays players' turns and scores. 
+Project expectations can be found here: https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo-v2.html
+GitHub repo can be found here: https://github.com/Catalyst4Change/tic-tac-toe
 
 I enjoyed building this and honing the visual style to be consistent with the source material. Once I finished the basic code to complete all the requested functionality, I added a few touches of my own. First the ability to choose one’s preferred weapon from the grid and then a title card/splash screen to introduce the game.
 
@@ -42,6 +44,6 @@ There does seem to be some visual artifacting around the text when the center ba
 </p>
 
 ## Domo arigato:
-I would like to thank my mentor, Alia; and my friends Grace & Evan. They helped me over the roadblocks that stalled my progress and encouraged me along the way.
+I would like to thank my mentor Alia, and my friends Grace & Evan. They helped me over the roadblocks that stalled my progress and encouraged me along the way.
 
 Pre-emptive thanks to the Disney(c) Corporation for not suing me for using their IP.
