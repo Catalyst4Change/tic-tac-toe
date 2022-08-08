@@ -3,8 +3,8 @@ var playerTwo = new Player('⭕️');
 var newGame = new ticTacToe(playerOne, playerTwo);
 var titleCard = document.querySelector('.title-card');
 var startGameButton = document.querySelector('.start-game-button');
-var playerOneBanner = document.querySelector('#itchy-wins');
-var playerTwoBanner = document.querySelector('#scratchy-wins');
+var playerOneScore = document.querySelector('#itchy-wins');
+var playerTwoScore = document.querySelector('#scratchy-wins');
 var playerOneWeapon = document.querySelector('.itchy-weapon');
 var playerTwoWeapon = document.querySelector('.scratchy-weapon');
 var centerBanner = document.querySelector('.banner');
@@ -56,8 +56,8 @@ function renderBoard() {
 };
 
 function updateScores() {
-  playerOneBanner.innerText = `${playerOne.winCount}`;
-  playerTwoBanner.innerText = `${playerTwo.winCount}`;
+  playerOneScore.innerText = `${playerOne.winCount}`;
+  playerTwoScore.innerText = `${playerTwo.winCount}`;
 };
 
 function updateBanner(text) {
