@@ -1,8 +1,8 @@
 class ticTacToe {
   constructor(playerOne, playerTwo) {
     this.chooseWeapon = true;
-    this.playerOne = playerOne
-    this.playerTwo = playerTwo
+    this.playerOne = playerOne;
+    this.playerTwo = playerTwo;
     this.gameOver = false;
     this.playerOneTurn = true;
     this.turnsTaken = 0; //when gets to 9 game over
@@ -16,7 +16,8 @@ class ticTacToe {
       7: "",
       8: "",
       9: ""
-    }
+    };
+
     this.weapons = {
       1: "🪓",
       2: "🪚",
@@ -27,8 +28,8 @@ class ticTacToe {
       7: "💣",
       8: "🪠",
       9: "🧨"
-    }
-  }
+    };
+  };
 
   applyChosenWeapon(gridPosition) {
     if (this.playerOneTurn) {
@@ -37,13 +38,14 @@ class ticTacToe {
       this.weapons[gridPosition] = "";
       this.playerOneTurn = false;
       renderBoard();
-      scratchyChooseWeapon()
+      scratchyChooseWeapon();
+
     } else {
       this.playerTwo.token = this.weapons[gridPosition];
       playerTwoWeapon.innerText = this.weapons[gridPosition];
       this.chooseWeapon = false;
       this.playerOneTurn = true;
-      this.clearGameBoard()
+      this.clearGameBoard();
     }
   }
 
@@ -54,16 +56,16 @@ class ticTacToe {
   }
 
   claimGridSpace(gridPosition) {
-    this.turnsTaken += 1
+    this.turnsTaken += 1;
     if (this.playerOneTurn) {
       this.tokenPositions[gridPosition] = this.playerOne.token;
       this.playerOneTurn = false;
-      updateBanner("Scratchy's turn!")
+      updateBanner("Scratchy's turn!");
       
     } else {
       this.tokenPositions[gridPosition] = this.playerTwo.token;
       this.playerOneTurn = true;
-      updateBanner("Itchy's turn!")
+      updateBanner("Itchy's turn!");
     }
 
     this.checkForWin();
@@ -94,41 +96,41 @@ class ticTacToe {
 
     } else if (this.tokenPositions[3] === this.tokenPositions[5] && this.tokenPositions[5] === this.tokenPositions[7] && this.tokenPositions[7] != "") {
       this.someoneWon();
-    }
-  }
+    };
+  };
 
   someoneWon() {
   this.gameOver = true;
-  this.startClearTimer()
+  this.startClearTimer();
   
   if (!this.playerOneTurn) {
       this.playerOne.increaseWins();
-      updateBanner('ITCHY WINS!')
-      updateScores()
+      updateBanner('ITCHY WINS!');
+      updateScores();
 
     } else if (this.playerOneTurn) {
       this.playerTwo.increaseWins();
-      updateBanner('SCRATCHY WINS!')
-      updateScores()
-    }
-  }
+      updateBanner('SCRATCHY WINS!');
+      updateScores();
+    };
+  };
 
   checkForDraw() {
     if (!this.gameOver && this.turnsTaken === 9) {
       this.gameOver = true;
       this.startClearTimer();
-      updateBanner('DRAW!')
-    }
-  }
+      updateBanner('DRAW!');
+    };
+  };
   
   startClearTimer() {
     var timeoutID = setTimeout(() => {this.clearGameBoard()}, 3000);    
-  }
+  };
 
   clearGameBoard() {
     for (let i = 1; i < 10; i++) {
       this.tokenPositions[i] = "";
-    }
+    };
 
     this.turnsTaken = 0;
     this.gameOver = false;
@@ -138,7 +140,7 @@ class ticTacToe {
       updateBanner("Itchy's turn!")
     } else {
       updateBanner("Scratchy's turn!")
-    }
-  }
-}
+    };
+  };
+};
 
