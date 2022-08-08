@@ -39,13 +39,13 @@ My favorite part (aside from giggling about cartoon animals fighting to the deat
 
 There does seem to be some visual artifacting around the text when the center banner message changes. I think this may be a a result of using a custom font with irregular kerning. If I am to continue working on this project I would look for ways to scrub or update those lagging pixels.
 
-I also had to push this README over and over because the formatting was difficult to see on my local machine.
-
 <p align="center">
 <img src="assets/artifacting.png" alt="visual glitches around banner text">
 </p>
 
-## Domo arigato:
+Lastly, every time I thought I was done with this project I'd find some nit-picky thing to change. Then I had to make a new branch, make minor changes, add, commit, push, pull request, merge... At a certain point I need to draw a line and be done, but on the other hand I believe in constant improvement. 😩
+
+## Doumo Arigatou Gozaimasu:
 I would like to thank my mentor Alia, and my friends Grace & Evan. They helped me over the roadblocks that stalled my progress and encouraged me along the way.
 
 Pre-emptive thanks to the Disney(c) Corporation for not suing me for using their IP.
