@@ -31,6 +31,11 @@ function scratchyChooseWeapon() {
   centerBanner.innerHTML = "Scratchy, choose<br>your weapon!";
 };
 
+function renderWeapons() {
+  playerOneWeapon.innerText = newGame.playerOne.token;
+  playerTwoWeapon.innerText = newGame.playerTwo.token;
+};
+
 function handleClick(eventData) {
   var gridPosition = parseInt(eventData.target.id);
 
