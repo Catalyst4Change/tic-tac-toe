@@ -1,8 +1,30 @@
+
 .container {
+  width: 1100px;
+  margin: 0, auto;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: space-between;
   border: 1px solid black;
+  background-image: linear-gradient(to right, rgb(255, 221, 0), rgb(255, 213, 0));
+  overflow: hidden;
+  position: relative;
+}
+
+.title-card {
+  height: 511px;
+  width: 640px;
+  position: absolute;
+  top: -7%;
+  left: 20%;
+}
+
+.start-game-button {
+  position: absolute;
+  z-index: 100;
+  top: 410px;
+  left: 230px;
+  font-size: 30px;
 }
 
 .section {
@@ -14,21 +36,31 @@
   background-repeat: no-repeat;
   background-position: center;
   background-position: bottom;
-  background-color: aqua;
   font-size: 30px;
   min-width: 50px;
   flex: auto;
 }
 
-.P1 {
-  background-image: url('assets/Itchy.png');
-  background-size: 175px;
+.weapon-emoji {
+  font-size: 75px;
+  position: absolute;
+  top: 70px;
 }
 
-.P2 {
-  background-image: url('assets/Scratchy.png');
-  background-size: 250px;
+.itchy-img {
+  width: 175px;
+  height: 225px;
+  position: absolute;
+  top: 200px;
 }
+
+.scratchy-img {
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  top: 130px;
+}
+
 
 .center{
   flex-direction:column
@@ -36,7 +68,7 @@
 
 .banner {
   align-items: center;
-  height:50px;
+  height:100px;
   font-size: 40px;
 }
 

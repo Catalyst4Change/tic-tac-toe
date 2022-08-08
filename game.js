@@ -1,5 +1,6 @@
 class ticTacToe {
   constructor(playerOne, playerTwo) {
+    this.chooseWeapon = true;
     this.playerOne = playerOne
     this.playerTwo = playerTwo
     this.gameOver = false;
@@ -16,6 +17,34 @@ class ticTacToe {
       8: "",
       9: ""
     }
+    this.weapons = {
+      1: "🪓",
+      2: "🪚",
+      3: "⛏",
+      4: "🗡",
+      5: "🔪",
+      6: "🖋",
+      7: "💣",
+      8: "🪠",
+      9: "🧨"
+    }
+  }
+
+  applyChosenWeapon(gridPosition) {
+    if (this.playerOneTurn) {
+      this.playerOne.token = this.weapons[gridPosition];
+      playerOneWeapon.innerText = this.weapons[gridPosition];
+      this.weapons[gridPosition] = "";
+      this.playerOneTurn = false;
+      renderBoard();
+      scratchyChooseWeapon()
+    } else {
+      this.playerTwo.token = this.weapons[gridPosition];
+      playerTwoWeapon.innerText = this.weapons[gridPosition];
+      this.chooseWeapon = false;
+      this.playerOneTurn = true;
+      this.clearGameBoard()
+    }
   }
 
   checkGridSpace(gridPosition) {
@@ -29,12 +58,12 @@ class ticTacToe {
     if (this.playerOneTurn) {
       this.tokenPositions[gridPosition] = this.playerOne.token;
       this.playerOneTurn = false;
-      updateBannerTurn('Scratchy')
+      updateBanner("Scratchy's turn!")
       
     } else {
       this.tokenPositions[gridPosition] = this.playerTwo.token;
       this.playerOneTurn = true;
-      updateBannerTurn('Itchy')
+      updateBanner("Itchy's turn!")
     }
 
     this.checkForWin();
@@ -74,12 +103,12 @@ class ticTacToe {
   
   if (!this.playerOneTurn) {
       this.playerOne.increaseWins();
-      updateBannerWin('ITCHY')
+      updateBanner('ITCHY WINS!')
       updateScores()
 
     } else if (this.playerOneTurn) {
       this.playerTwo.increaseWins();
-      updateBannerWin('SCRATCHY')
+      updateBanner('SCRATCHY WINS!')
       updateScores()
     }
   }
@@ -88,7 +117,7 @@ class ticTacToe {
     if (!this.gameOver && this.turnsTaken === 9) {
       this.gameOver = true;
       this.startClearTimer();
-      updateBannerDraw()
+      updateBanner('DRAW!')
     }
   }
   
@@ -106,9 +135,9 @@ class ticTacToe {
     renderBoard();
 
     if (this.playerOneTurn) {
-      updateBannerTurn('Itchy')
+      updateBanner("Itchy's turn!")
     } else {
-      updateBannerTurn('Scratchy')
+      updateBanner("Scratchy's turn!")
     }
   }
 }
