@@ -3,7 +3,7 @@
 </p>
 
 ## What’s going on here?:
-This project was designed and built by Catalyst for my Turing School of Software & Design Module 1 final solo project. The goal was to create a working Tic-Tac-Toe game that keeps track of and displays players' turns and scores. 
+This project was designed and built by Catalyst for my Turing School of Software & Design Module 1 final solo project. The goal was to create a working Tic-Tac-Toe game that keeps track of and displays players' turns and scores.\
 Project expectations can be found here: https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo-v2.html\
 GitHub repo can be found here: https://github.com/Catalyst4Change/tic-tac-toe
 
@@ -38,6 +38,8 @@ My favorite part (aside from giggling about cartoon animals fighting to the deat
 </p>
 
 There does seem to be some visual artifacting around the text when the center banner message changes. I think this may be a a result of using a custom font with irregular kerning. If I am to continue working on this project I would look for ways to scrub or update those lagging pixels.
+
+I also had to push this README over and over because the formatting was difficult to see on my local machine.
 
 <p align="center">
 <img src="assets/artifacting.png" alt="visual glitches around banner text">
