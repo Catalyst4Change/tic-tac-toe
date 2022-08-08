@@ -6,13 +6,43 @@ var playerTwoBanner = document.querySelector('#P2-wins')
 var centerBanner = document.querySelector('.banner');
 var gameBoard = document.querySelector('.game-board');
 var tokenSpacesVis = document.querySelectorAll('.token-space');
+var playerOneWeapon = document.querySelector('.itchy-weapon');
+var playerTwoWeapon = document.querySelector('.scratchy-weapon')
+var titleCard = document.querySelector('.title-card');
+var startGameButton = document.querySelector('.start-game-button')
+
 
 gameBoard.addEventListener('click', handleClick);
+startGameButton.addEventListener('click', startGame)
+
+function startGame() {
+  titleCard.remove();
+}
+
+
+itchyChooseWeapon();
+
+function itchyChooseWeapon() {
+  centerBanner.innerHTML = "Itchy, choose<br>your weapon!";
+  newGame.chooseWeapons = true;
+  newGame.tokenPositions = newGame.weapons;
+  renderBoard();
+}
+
+function scratchyChooseWeapon() {
+  centerBanner.innerHTML = "Scratchy, choose<br>your weapon!";
+  // renderBoard();
+}
+
 
 function handleClick(eventData) {
   var gridPosition = parseInt(eventData.target.id);
-  newGame.checkGridSpace(gridPosition);
-  renderBoard();
+  if (newGame.chooseWeapon) {
+    newGame.applyChosenWeapon(gridPosition);
+  } else {
+    newGame.checkGridSpace(gridPosition);
+  }
+    renderBoard();
 }
 
 function renderBoard() {
@@ -26,14 +56,6 @@ function updateScores() {
   playerTwoBanner.innerText = `${playerTwo.winCount}`;
 }
 
-function updateBannerTurn(player) {
-  centerBanner.innerText = `${player}'s Turn!`;
-}
-
-function updateBannerWin(player) {
-  centerBanner.innerText = `${player} WINS!`;
-}
-
-function updateBannerDraw() {
-  centerBanner.innerText = `DRAW!`;
+function updateBanner(text) {
+  centerBanner.innerText = `${text}`;
 }
