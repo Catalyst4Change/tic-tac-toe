@@ -1,5 +1,5 @@
 <p align="center">
-![Itchy & Scratchy Tic-Tac-Toe game screen](assets/fullscreen.png)
+<img url="assets/fullscreen.png" alt="Itchy & Scratchy Tic-Tac-Toe game screen">
 </p>
 
 ## What’s going on here?:
@@ -32,13 +32,13 @@ My biggest problem was a logic-breaking problem late in the functionality phase.
 My favorite part (aside from giggling about cartoon animals fighting to the death) was implementing the weapon choice feature. I set everything up the way that I expected it to work and refreshed my demo page. The gridded array of weapons displayed perfectly. The players’ choices were saved and recalled as game tokens. My code ran exactly as expected, on the first try, with no bugs! I was legitimately surprised, but also very proud of myself in that moment.
 
 <p align="center">
-![weapon choice screen showing various tools of destruction](assets/choseweapon.png)
+<img url="assets/choseweapon.png" alt="weapon choice screen showing various tools of destruction">
 </p>
 
 There does seem to be some visual artifacting around the text when the center banner message changes. I think this may be a a result of using a custom font with irregular kerning. If I am to continue working on this project I would look for ways to scrub or update those lagging pixels.
 
 <p align="center">
-![visual glitches around banner text](assets/artifacting.png)
+<img url="assets/artifacting.png" alt="visual glitches around banner text">
 </p>
 
 ## Domo arigato:
