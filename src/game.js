@@ -34,15 +34,15 @@ class ticTacToe {
   applyChosenWeapon(gridPosition) {
     if (this.playerOneTurn) {
       this.playerOne.token = this.weapons[gridPosition];
-      playerOneWeapon.innerText = this.weapons[gridPosition];
       this.weapons[gridPosition] = "";
       this.playerOneTurn = false;
       renderBoard();
+      renderWeapons();
       scratchyChooseWeapon();
 
     } else {
       this.playerTwo.token = this.weapons[gridPosition];
-      playerTwoWeapon.innerText = this.weapons[gridPosition];
+      renderWeapons();
       this.chooseWeapon = false;
       this.playerOneTurn = true;
       this.clearGameBoard();
@@ -124,7 +124,9 @@ class ticTacToe {
   };
   
   startClearTimer() {
-    var timeoutID = setTimeout(() => {this.clearGameBoard()}, 3000);    
+    setTimeout(() => {this.clearGameBoard()}, 3000);    
+    // var timeoutID = setTimeout(() => {this.clearGameBoard()}, 3000);    
+
   };
 
   clearGameBoard() {
