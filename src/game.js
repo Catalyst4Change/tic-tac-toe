@@ -125,8 +125,6 @@ class ticTacToe {
   
   startClearTimer() {
     setTimeout(() => {this.clearGameBoard()}, 3000);    
-    // var timeoutID = setTimeout(() => {this.clearGameBoard()}, 3000);    
-
   };
 
   clearGameBoard() {
