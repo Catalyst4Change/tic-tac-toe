@@ -1,5 +1,6 @@
 class Player {
-  constructor(token) {
+  constructor(id, token) {
+    this.id = "";
     this.token = token;
     this.winCount = 0;
   }

@@ -1,5 +1,5 @@
-var playerOne = new Player('❌');
-var playerTwo = new Player('⭕️');
+var playerOne = new Player('Itchy', '❌');
+var playerTwo = new Player('Scratchy', '⭕️');
 var newGame = new ticTacToe(playerOne, playerTwo);
 var titleCard = document.querySelector('.title-card');
 var startGameButton = document.querySelector('.start-game-button');
