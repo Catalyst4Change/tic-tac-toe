@@ -2,7 +2,9 @@
   font-family: 'Simpsonfont';
   src: url(assets/Simpsonfont.ttf) format('truetype');
 }
+
 /* splash screen */
+
 .title-card {
   height: 511px;
   width: 640px;
@@ -10,12 +12,12 @@
   transform: translate(-50%, -50%);
   top: 40%;
   left: 47%;
-  display: none;
 }
 
 .top-level {
   z-index: 100000;
 }
+
 .start-game-button {
   font-family: Simpsonfont;
   color: white;
@@ -70,7 +72,7 @@
   gap: 1vw;
 }
 
-@media only screen and (max-width: 895px) {
+@media only screen and (max-width: 400px) {
   .canvas {
     width:min-content;
     display: grid;
