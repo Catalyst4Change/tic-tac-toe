@@ -8,7 +8,7 @@ var playerTwoScore = document.querySelector('#scratchy-wins');
 var playerOneWeapon = document.querySelector('.itchy-weapon');
 var playerTwoWeapon = document.querySelector('.scratchy-weapon');
 var centerBanner = document.querySelector('.banner');
-var gameBoard = document.querySelector('.game-board');
+var gameBoard = document.getElementById('game-board');
 var tokenSpacesVis = document.querySelectorAll('.token-space');
 
 gameBoard.addEventListener('click', handleClick);
@@ -21,14 +21,14 @@ function startGame() {
 itchyChooseWeapon();
 
 function itchyChooseWeapon() {
-  centerBanner.innerHTML = "Itchy, choose<br>your weapon!";
+  centerBanner.innerText = "Itchy, choose your weapon!";
   newGame.chooseWeapons = true;
   newGame.tokenPositions = newGame.weapons;
   renderBoard();
 };
 
 function scratchyChooseWeapon() {
-  centerBanner.innerHTML = "Scratchy, choose<br>your weapon!";
+  centerBanner.innerText = "Scratchy, choose your weapon!";
 };
 
 function renderWeapons() {
