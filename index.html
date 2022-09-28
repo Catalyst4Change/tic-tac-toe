@@ -8,52 +8,56 @@
   <title>Tic-Tac-Toe</title>
 </head>
 <body>
-  <main class="canvas">
-    <div class="title-card">
-      <img src="assets/title.jpg" alt="Itchy & Scratchy Show title card">
-      <button class="start-game-button">Start Game</button>
-    </div>
-    <section class="left-third side-bar section">
-      <p class="top-level">
-        Itchy Wins: &nbsp
-      </p>  
-      <p class="top-level" id="itchy-wins">
-        0
-      </p>
-      <div class="itchy-weapon weapon-display">
-        ❌
+  <div class="title-card">
+    <img src="assets/title.jpg" alt="Itchy & Scratchy Show title card">
+    <button class="start-game-button">Start Game</button>
+  </div>
+
+
+  <div class="canvas">
+    <!-- itchy -->
+    <section id="left-sidebar" class="d-border">
+      <div id="itchy" class="side-bar s-border">
+        <div class="row">
+        <p class="top-level">Itchy Wins: &nbsp;</p>  
+        <p class="top-level" id="itchy-wins">0</p>
       </div>
-      <img class="itchy-img" src="assets/Itchy.png" alt="Itchy Mouse brandishing chainsaw">
+        <div class="itchy-weapon weapon-display">
+          ❌
+        </div>
+        <img class="itchy-img" src="assets/Itchy.png" alt="Itchy Mouse brandishing chainsaw">
+      </div>
     </section>
-    <section class="center-section section"> 
-      <section class="banner section">
+    <!-- game-board -->
+    <section class="center-section"> 
+      <section class="banner">
         Itchy's turn!
       </section> 
-      <section class="game-board section" section>
-        <div id="1" class="grid-position-one token-space section"></div>
-        <div id="2" class="grid-position-two token-space section"></div>
-        <div id="3" class="grid-position-three token-space section"></div>
-        <div id="4" class="grid-position-four token-space section"></div>
-        <div id="5" class="grid-position-five token-space section"></div>
-        <div id="6" class="grid-position-six token-space section"></div>
-        <div id="7" class="grid-position-seven token-space section"></div>
-        <div id="8" class="grid-position-eight token-space section"></div>
-        <div id="9" class="grid-position-nine token-space section"></div>
+      <section id="game-board" class="" section>
+        <div id="1" class="grid-position-one token-space section">1</div>
+        <div id="2" class="grid-position-two token-space section">2</div>
+        <div id="3" class="grid-position-three token-space section">3</div>
+        <div id="4" class="grid-position-four token-space section">4</div>
+        <div id="5" class="grid-position-five token-space section">5</div>
+        <div id="6" class="grid-position-six token-space section">6</div>
+        <div id="7" class="grid-position-seven token-space section">7</div>
+        <div id="8" class="grid-position-eight token-space section">8</div>
+        <div id="9" class="grid-position-nine token-space section">9</div>
       </section>
     </section>
-    <section class="right-third side-bar section">
-      <p class="top-level">
-        Scratchy Wins: &nbsp
-      </p>
-      <p class="top-level" id="scratchy-wins">
-        0
-      </p>
-      <div class="scratchy-weapon weapon-display">
-        ⭕️
+    <!-- scratchy -->
+    <section id="right-sidebar" class="d-border">
+      <div id="scratchy" class="side-bar s-border">
+        <div class="row">
+          <p class="top-level">Scratchy Wins: &nbsp;</p>
+          <p class="top-level" id="scratchy-wins">0</p>
+        </div>
+        <div class="scratchy-weapon weapon-display">⭕️</div>
+        <img class="scratchy-img" src="assets/Scratchy.png" alt="Scratchy Cat brandishing axe">
       </div>
-      <img class="scratchy-img" src="assets/Scratchy.png" alt="Scratchy Cat brandishing axe">
     </section>
-  </main>
+
+  </div>
   <script src="src/player.js"></script>
   <script src="src/game.js"></script>
   <script src="main.js"></script>
